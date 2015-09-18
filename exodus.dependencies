@@ -1,0 +1,12 @@
+[
+  {
+    "repository": "device_cyanogen_msm8939-common",
+    "target_path": "device/cyanogen/msm8939-common"
+  },{
+    "repository": "kernel_yu_tomato",
+    "target_path": "kernel/yu/tomato"
+  },{
+    "repository": "proprietary_vendor_yu",
+    "target_path": "vendor/yu"
+  }
+]
