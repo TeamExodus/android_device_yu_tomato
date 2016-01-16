@@ -79,6 +79,10 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     YUDoze
 
+# libhealthd library as the supplement of off-mode charging
+PRODUCT_PACKAGES += \
+    libhealthd.msm
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916
