@@ -81,7 +81,7 @@ PRODUCT_PACKAGES += \
 
 # libhealthd library as the supplement of off-mode charging
 PRODUCT_PACKAGES += \
-    libhealthd.msm
+    libhealthd.tomato
 
 # GPS
 PRODUCT_PACKAGES += \
