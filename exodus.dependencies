@@ -5,5 +5,8 @@
   },{
     "repository": "kernel_cyanogen_msm8916",
     "target_path": "kernel/cyanogen/msm8916"
+  },{
+    "repository": "vendor_yu_tomato",
+    "target_path": "vendor/yu/tomato"
   }
 ]
