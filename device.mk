@@ -19,6 +19,9 @@ $(call inherit-product-if-exists, vendor/yu/tomato/tomato-vendor.mk)
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Turn off Dexpreopt    Fatal signal 6 (SIGABRT), code -6 (SI_TKILL)
+WITH_DEXPREOPT := false
+
 # Permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
