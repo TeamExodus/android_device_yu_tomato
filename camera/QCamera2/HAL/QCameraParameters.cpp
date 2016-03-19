@@ -1336,7 +1336,7 @@ int32_t QCameraParameters::setPictureSize(const QCameraParameters& params)
 
             // set the new value
             char val[32];
-            sprintf(val, "%dx%d", width, height);
+            snprintf(val, 32,"%dx%d", width, height);
             CDBG_HIGH("%s: picture size requested %s", __func__, val);
             updateParamEntry(KEY_PICTURE_SIZE, val);
             updateViewAngle(width, height);
@@ -5323,7 +5323,7 @@ int32_t QCameraParameters::setEffect(const char *effect)
 int32_t QCameraParameters::setBrightness(int brightness)
 {
     char val[16];
-    sprintf(val, "%d", brightness);
+    snprintf(val, 16,"%d", brightness);
     updateParamEntry(KEY_QC_BRIGHTNESS, val);
 
     int32_t value = brightness;
@@ -5495,7 +5495,7 @@ void  QCameraParameters::updateCurrentFocusPosition(cam_focus_pos_info_t &cur_po
 int32_t QCameraParameters::setSharpness(int sharpness)
 {
     char val[16];
-    sprintf(val, "%d", sharpness);
+    snprintf(val, 16, "%d", sharpness);
     updateParamEntry(KEY_QC_SHARPNESS, val);
     CDBG("%s: Setting sharpness %s", __func__, val);
 
@@ -5521,7 +5521,7 @@ int32_t QCameraParameters::setSharpness(int sharpness)
 int32_t QCameraParameters::setSkinToneEnhancement(int sceFactor)
 {
     char val[16];
-    sprintf(val, "%d", sceFactor);
+    snprintf(val, 16, "%d", sceFactor);
     updateParamEntry(KEY_QC_SCE_FACTOR, val);
     CDBG("%s: Setting skintone enhancement %s", __func__, val);
 
@@ -5547,7 +5547,7 @@ int32_t QCameraParameters::setSkinToneEnhancement(int sceFactor)
 int32_t QCameraParameters::setSaturation(int saturation)
 {
     char val[16];
-    sprintf(val, "%d", saturation);
+    snprintf(val, 16, "%d", saturation);
     updateParamEntry(KEY_QC_SATURATION, val);
     CDBG("%s: Setting saturation %s", __func__, val);
 
@@ -5573,7 +5573,7 @@ int32_t QCameraParameters::setSaturation(int saturation)
 int32_t QCameraParameters::setContrast(int contrast)
 {
     char val[16];
-    sprintf(val, "%d", contrast);
+    snprintf(val, 16,"%d", contrast);
     updateParamEntry(KEY_QC_CONTRAST, val);
     CDBG("%s: Setting contrast %s", __func__, val);
 
@@ -5779,7 +5779,7 @@ int32_t QCameraParameters::setFaceRecognition(const char *faceRecog,
 int32_t QCameraParameters::setZoom(int zoom_level)
 {
     char val[16];
-    sprintf(val, "%d", zoom_level);
+    snprintf(val, 16, "%d", zoom_level);
     updateParamEntry(KEY_ZOOM, val);
 
     return AddSetParmEntryToBatch(m_pParamBuf,
@@ -6337,7 +6337,7 @@ int32_t QCameraParameters::setLensShadeValue(const char *lensShadeStr)
 int32_t QCameraParameters::setExposureCompensation(int expComp)
 {
     char val[16];
-    sprintf(val, "%d", expComp);
+    snprintf(val, 16, "%d", expComp);
     updateParamEntry(KEY_EXPOSURE_COMPENSATION, val);
 
     // Don't need to pass step as part of setParameter because
