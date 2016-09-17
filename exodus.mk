@@ -14,7 +14,7 @@
 
 $(call inherit-product, device/yu/tomato/full_tomato.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common exodus stuff.
 $(call inherit-product, vendor/exodus/config/common_full_phone.mk)
 
 # Must define platform variant before including any common things
