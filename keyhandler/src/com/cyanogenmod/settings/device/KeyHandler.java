@@ -81,7 +81,7 @@ public class KeyHandler implements DeviceKeyHandler {
     public KeyHandler(Context context) {
         mContext = context;
         mPowerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-        mEventHandler = new EventHandler();
+        mEventHandler = new EventHandler();http://beta.speedtest.net/#
         mGestureWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
                 "GestureWakeLock");
 
@@ -166,11 +166,11 @@ public class KeyHandler implements DeviceKeyHandler {
                 dispatchMediaKeyWithWakeLockToMediaSession(KeyEvent.KEYCODE_MEDIA_NEXT);
                 break;
             case GESTURE_SLIDE_C_SCANCODE:
-                doHapticFeedback();
+                /*doHapticFeedback();
                 mGestureWakeLock.acquire(GESTURE_WAKELOCK_DURATION);
 
                 Intent intent = new Intent(cyanogenmod.content.Intent.ACTION_SCREEN_CAMERA_GESTURE);
-                mContext.sendBroadcast(intent, Manifest.permission.STATUS_BAR_SERVICE);
+                mContext.sendBroadcast(intent, Manifest.permission.STATUS_BAR_SERVICE);*/
                 break;
             case GESTURE_SLIDE_O_SCANCODE:
                 doHapticFeedback();
@@ -203,7 +203,7 @@ public class KeyHandler implements DeviceKeyHandler {
         if (!mEventHandler.hasMessages(GESTURE_REQUEST)) {
             Message msg = getMessageForKeyEvent(event.getScanCode());
             boolean defaultProximity = mContext.getResources().getBoolean(
-                    org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWakeEnabledByDefault);
+                    com.android.internal.R.bool.config_proximityCheckOnWakeEnabledByDefault);
             boolean proximityWakeCheckEnabled = Settings.System.getInt(mContext.getContentResolver(),
                     Settings.System.PROXIMITY_ON_WAKE, defaultProximity ? 1 : 0) == 1;
             if (mProximityWakeSupported && proximityWakeCheckEnabled && mProximitySensor != null) {
