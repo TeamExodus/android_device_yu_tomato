@@ -23,7 +23,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.util.Log;
 
-import org.cyanogenmod.internal.util.FileUtils;
+import org.cyanogenmod.hardware.util.FileUtils;
 import com.cyanogenmod.settings.device.utils.Constants;
 
 public class Startup extends BroadcastReceiver {
