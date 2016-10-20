@@ -33,9 +33,13 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent intent) {
         final String action = intent.getAction();
-        if (!action.equals(cyanogenmod.content.Intent.ACTION_INITIALIZE_CM_HARDWARE)) {
+        if (!(Intent.ACTION_BOOT_COMPLETED.equals(action) 
+            || Intent.ACTION_PRE_BOOT_COMPLETED.equals(action))) {
             return;
         }
+        /*if (!action.equals(cyanogenmod.content.Intent.ACTION_INITIALIZE_CM_HARDWARE)) {
+            return;
+        }*/
 
         // Disable touchscreen gesture settings if needed
         if (!hasTouchscreenGestures()) {
