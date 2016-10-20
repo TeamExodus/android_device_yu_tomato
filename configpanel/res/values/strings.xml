@@ -24,12 +24,14 @@
     <string name="touchscreen_music_gesture_summary">Use gestures to control music playback \n
     • Swipe down to play/pause\n
     • Swipe left for previous track\n
+    • Swipe right for next track</string>
+
     <!-- Device specific settings -->
     <string name="device_settings_app_name">Advanced settings</string>
  
     <!-- Touchscreen gestures -->
     <string name="screen_gestures_panel_title">Gestures</string>
- 
+
     <!-- Touchscreen gesture haptic feedback -->
     <string name="touchscreen_gesture_extras">Extras</string>
     <string name="touchscreen_gesture_haptic_feedback">Haptic feedback</string>
