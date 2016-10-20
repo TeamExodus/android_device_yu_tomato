@@ -40,7 +40,7 @@ import android.view.KeyEvent;
 import com.android.internal.os.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
 
-import android.providers.Settings;
+import android.provider.Settings;
 
 public class KeyHandler implements DeviceKeyHandler {
 

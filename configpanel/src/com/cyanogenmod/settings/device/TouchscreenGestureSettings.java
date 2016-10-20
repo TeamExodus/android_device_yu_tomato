@@ -24,7 +24,7 @@ import android.preference.ListPreference;
 import android.preference.SwitchPreference;
 import android.view.MenuItem;
 
-import android.providers.Settings;
+import android.provider.Settings;
 import com.cyanogenmod.settings.device.utils.Constants;
 
 public class TouchscreenGestureSettings extends PreferenceActivity

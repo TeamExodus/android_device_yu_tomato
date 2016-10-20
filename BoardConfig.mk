@@ -15,6 +15,9 @@
 
 include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
+# CMHW
+BOARD_USES_CYANOGEN_HARDWARE := true
+
 include device/yu/tomato/board/*.mk
 
 # Assertions
